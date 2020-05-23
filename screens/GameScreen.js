@@ -19,7 +19,7 @@ const GameScreen = (props) => {
     const currentLow=useRef(1);
     const currentGreat=useRef(100);
     const nextGuestHandler = (direction) => {
-        if ((direction === 'lower' && currentGuest < props.userChoice) || (direction === 'greater' && currentGuest < props.userChoice)) {
+        if ((direction === 'lower' && currentGuest < props.userChoice) || (direction === 'greater' && currentGuest > props.userChoice)) {
             Alert.alert('Don\'t Lie!!', 'You Know that this is wrong!', [{ text: 'Sorry', style: 'cancel' }]);
             return ;
         }
